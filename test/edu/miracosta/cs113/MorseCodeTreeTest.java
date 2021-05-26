@@ -1,10 +1,10 @@
 package edu.miracosta.cs113;
 
-import org.junit.Before;
-import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
+
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * MorseCodeTreeTest : Tester class for MorseCodeTree, specifically for its translateFromMorseCode method and
@@ -67,7 +67,7 @@ public class MorseCodeTreeTest {
     @Before
     public void setUp() {
         mct = new MorseCodeTree();
-    }
+        }
 
     /**
      * Helper method compares an array of morse code entries with a parallel array of its corresponding English
@@ -78,8 +78,8 @@ public class MorseCodeTreeTest {
      * @param decodedValue The array of English letter values expected after translating the values in
      *                     morseCode at the same indices.
      */
-    private void compareDecodedValues(String[] morseCode, String[] decodedValue) {
-        try {
+    private void compareDecodedValues(String[] morseCode, String[] decodedValue) {    	
+       try {
             for (int i = 0; i < morseCode.length; i ++) {
                 String actualDecodedValue = mct.translateFromMorseCode(morseCode[i]);
                 assertEquals("Failure for case " + i, decodedValue[i], actualDecodedValue);
